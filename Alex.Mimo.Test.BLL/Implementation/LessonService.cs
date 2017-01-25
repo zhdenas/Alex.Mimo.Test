@@ -6,12 +6,12 @@ namespace Alex.Mimo.Test.BLL.Implementation
 {
     public class LessonService:ILessonService
     {
-        public void SetCompleted(LessonModel lesson)
+        public void SetCompleted(CheckLessonModel checkLesson)
         {
             throw new System.NotImplementedException();
         }
 
-        public Task SetCompletedAsync(LessonModel lesson)
+        public Task SetCompletedAsync(CheckLessonModel checkLesson)
         {
             throw new System.NotImplementedException();
         }

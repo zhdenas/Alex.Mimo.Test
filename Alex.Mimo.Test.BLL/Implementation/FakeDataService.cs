@@ -1,4 +1,5 @@
 ﻿using Alex.Mimo.Test.BLL.Interfaces;
+using Alex.Mimo.Test.DataAccess.Repositories;
 
 namespace Alex.Mimo.Test.BLL.Implementation
 {
@@ -11,7 +12,7 @@ namespace Alex.Mimo.Test.BLL.Implementation
 
         public static void FillData()
         {
-            
+            FakeDataRepository.FillData();
         }
     }
 }

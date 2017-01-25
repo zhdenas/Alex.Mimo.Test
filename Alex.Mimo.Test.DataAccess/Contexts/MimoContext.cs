@@ -3,7 +3,7 @@ using Alex.Mimo.Test.DataAccess.Entities;
 
 namespace Alex.Mimo.Test.DataAccess.Contexts
 {
-    internal class MimoContext : DbContext
+    public class MimoContext : DbContext
     {
         static MimoContext()
         {

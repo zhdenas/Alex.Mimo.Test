@@ -1,4 +1,5 @@
 using System.Web.Http;
+using Alex.Mimo.Test.Mappers;
 using Ninject;
 using Ninject.Modules;
 using Ninject.Web.Common;
@@ -68,6 +69,7 @@ namespace Alex.Mimo.Test.App_Start
         private static void RegisterServices(IKernel kernel)
         {
             kernel.Load(new INinjectModule[] {new ServiceModules(), new RepositoryModules()});
+            kernel.Bind<MimoMapper>().ToMethod(context => new MimoMapper()).InSingletonScope();
         }        
     }
 }
