@@ -26,7 +26,8 @@ namespace Alex.Mimo.Test.DataAccess.Repositories
                 {
                     CourseType = new CourseType
                     {
-                        Type = "Javascript"
+                        Name = "Javascript",
+                        Type = CourseTypeEnum.Javascript
                     },
                     Chapters = new List<Chapter>
                     {
@@ -123,7 +124,8 @@ namespace Alex.Mimo.Test.DataAccess.Repositories
                 {
                     CourseType = new CourseType
                     {
-                        Type = "Swift"
+                        Name = "Swift",
+                        Type = CourseTypeEnum.Swift
                     },
                     Chapters = new List<Chapter>
                     {
@@ -165,7 +167,8 @@ namespace Alex.Mimo.Test.DataAccess.Repositories
                 {
                     CourseType = new CourseType
                     {
-                        Type = "C#"
+                        Name = "C#",
+                        Type = CourseTypeEnum.CSharp
                     },
                     Chapters = new List<Chapter>
                     {
@@ -202,8 +205,16 @@ namespace Alex.Mimo.Test.DataAccess.Repositories
             {
                 context.Achievement.Add(new Achievement()
                 {
-                    AchievementType = new AchievementType() { }
-                })
+                    AchievementType = AchievementTypeEnum.FiftyLessons,
+                });
+                context.SaveChanges();
+            }
+            if (!context.UserAchievement.Any())
+            {
+                context.UserAchievement.Add(new UserAchievement()
+                {
+
+                });
                 context.SaveChanges();
             }
         }

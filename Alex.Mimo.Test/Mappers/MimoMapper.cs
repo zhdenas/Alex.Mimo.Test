@@ -1,4 +1,5 @@
 ﻿using Alex.Mimo.Test.Models;
+using AutoMapper;
 using CheckLessonModel = Alex.Mimo.Test.Models.CheckLessonModel;
 
 namespace Alex.Mimo.Test.Mappers
