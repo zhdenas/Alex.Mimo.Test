@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using Alex.Mimo.Test.BLL.Models;
 
-namespace Alex.Mimo.Test.BLL.Interfaces
+namespace Alex.Mimo.Test.BLL.Contracts
 {
     public interface IAchievementService
     {

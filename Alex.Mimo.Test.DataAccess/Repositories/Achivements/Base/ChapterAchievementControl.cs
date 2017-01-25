@@ -9,7 +9,7 @@ namespace Alex.Mimo.Test.DataAccess.Repositories.Achivements.Base
     internal abstract class ChapterAchievementControl : AchievementControl
     {
         protected ChapterAchievementControl(MimoContext context)
-            :base(context)
+            : base(context)
         {
         }
 

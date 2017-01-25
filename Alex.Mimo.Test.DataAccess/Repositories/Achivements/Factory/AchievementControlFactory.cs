@@ -35,7 +35,6 @@ namespace Alex.Mimo.Test.DataAccess.Repositories.Achivements.Factory
                 case AchievementTypeEnum.FiveChapters:
                     result = new FiveChaptersAchievementControl(context);
                     break;
-                    
             }
             return result;
         }

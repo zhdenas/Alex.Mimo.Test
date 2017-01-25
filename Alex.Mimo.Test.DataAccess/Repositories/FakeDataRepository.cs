@@ -16,7 +16,7 @@ namespace Alex.Mimo.Test.DataAccess.Repositories
             {
                 context.User.Add(new User
                 {
-                    Id = 1
+                    UserId = 1
                 });
                 context.SaveChanges();
             }
@@ -203,35 +203,35 @@ namespace Alex.Mimo.Test.DataAccess.Repositories
             }
             if (!context.Achievement.Any())
             {
-                context.Achievement.Add(new Achievement()
+                context.Achievement.Add(new Achievement
                 {
                     AchievementType = AchievementTypeEnum.CSharpCourse
                 });
-                context.Achievement.Add(new Achievement()
+                context.Achievement.Add(new Achievement
                 {
                     AchievementType = AchievementTypeEnum.SwiftCourse
                 });
-                context.Achievement.Add(new Achievement()
+                context.Achievement.Add(new Achievement
                 {
                     AchievementType = AchievementTypeEnum.FiftyLessons
                 });
-                context.Achievement.Add(new Achievement()
+                context.Achievement.Add(new Achievement
                 {
                     AchievementType = AchievementTypeEnum.FiveChapters
                 });
-                context.Achievement.Add(new Achievement()
+                context.Achievement.Add(new Achievement
                 {
                     AchievementType = AchievementTypeEnum.JavascriptCourse
                 });
-                context.Achievement.Add(new Achievement()
+                context.Achievement.Add(new Achievement
                 {
                     AchievementType = AchievementTypeEnum.FiveLessons
                 });
-                context.Achievement.Add(new Achievement()
+                context.Achievement.Add(new Achievement
                 {
                     AchievementType = AchievementTypeEnum.TwentyFiveLessons
                 });
-                context.Achievement.Add(new Achievement()
+                context.Achievement.Add(new Achievement
                 {
                     AchievementType = AchievementTypeEnum.OneChapter
                 });
@@ -239,10 +239,7 @@ namespace Alex.Mimo.Test.DataAccess.Repositories
             }
             if (!context.UserAchievement.Any())
             {
-                context.UserAchievement.Add(new UserAchievement()
-                {
-
-                });
+                context.UserAchievement.Add(new UserAchievement());
                 context.SaveChanges();
             }
         }

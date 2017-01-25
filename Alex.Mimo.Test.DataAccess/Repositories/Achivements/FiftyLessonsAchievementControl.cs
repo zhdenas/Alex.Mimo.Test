@@ -1,7 +1,5 @@
-﻿using System.Linq;
-using System.Threading;
+﻿using System.Threading;
 using System.Threading.Tasks;
-using Alex.Mimo.Test.Core;
 using Alex.Mimo.Test.DataAccess.Contexts;
 using Alex.Mimo.Test.DataAccess.Repositories.Achivements.Base;
 

@@ -1,5 +1,5 @@
-﻿using Alex.Mimo.Test.BLL.Implementation;
-using Alex.Mimo.Test.BLL.Interfaces;
+﻿using Alex.Mimo.Test.BLL.Contracts;
+using Alex.Mimo.Test.BLL.Services;
 using Ninject.Modules;
 using Ninject.Web.Common;
 

@@ -8,7 +8,7 @@ namespace Alex.Mimo.Test.DataAccess.Repositories.Achivements.Base
     internal abstract class LessonsAchievementControl : AchievementControl
     {
         protected LessonsAchievementControl(MimoContext context)
-            :base(context)
+            : base(context)
         {
         }
 

@@ -8,7 +8,7 @@ namespace Alex.Mimo.Test.DataAccess.Repositories.Achivements
 {
     internal class SwiftCourseAchievementControl : CourseAchievementControl
     {
-        public SwiftCourseAchievementControl(MimoContext context) 
+        public SwiftCourseAchievementControl(MimoContext context)
             : base(context)
         {
         }

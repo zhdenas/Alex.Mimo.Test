@@ -6,7 +6,7 @@ namespace Alex.Mimo.Test.DataAccess.Entities
     public class CourseType
     {
         [Key]
-        public int Id { get; set; }
+        public int CourseTypeId { get; set; }
 
         public string Name { get; set; }
 

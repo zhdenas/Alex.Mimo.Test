@@ -7,7 +7,7 @@ namespace Alex.Mimo.Test.DataAccess.Entities
     public class Course
     {
         [Key]
-        public int Id { get; set; }
+        public int CourseId { get; set; }
 
         [ForeignKey(nameof(Course.CourseTypeId))]
         public virtual CourseType CourseType { get; set; }

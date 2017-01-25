@@ -1,7 +1,7 @@
 ﻿using System.Threading;
 using System.Threading.Tasks;
 using System.Web.Http;
-using Alex.Mimo.Test.BLL.Interfaces;
+using Alex.Mimo.Test.BLL.Contracts;
 using Alex.Mimo.Test.Mappers;
 using Alex.Mimo.Test.Models;
 
@@ -11,6 +11,7 @@ namespace Alex.Mimo.Test.Controllers
     {
         private readonly ILessonService _lessonService;
         private readonly MimoMapper _mimoMapper;
+
         public LessonsController(ILessonService lessonService, MimoMapper mimoMapper)
         {
             this._lessonService = lessonService;

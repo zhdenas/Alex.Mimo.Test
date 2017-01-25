@@ -1,9 +1,8 @@
-﻿using Alex.Mimo.Test.BLL.Interfaces;
-using Alex.Mimo.Test.DataAccess.Repositories;
+﻿using Alex.Mimo.Test.DataAccess.Repositories;
 
-namespace Alex.Mimo.Test.BLL.Implementation
+namespace Alex.Mimo.Test.BLL.Services
 {
-    public class FakeDataService: IFakeDataService
+    public class FakeDataService : IFakeDataService
     {
         public void Fill()
         {

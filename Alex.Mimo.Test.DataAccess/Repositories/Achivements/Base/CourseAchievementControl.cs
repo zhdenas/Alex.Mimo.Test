@@ -9,12 +9,13 @@ namespace Alex.Mimo.Test.DataAccess.Repositories.Achivements.Base
 {
     internal abstract class CourseAchievementControl : AchievementControl
     {
-        protected CourseAchievementControl(MimoContext context) 
+        protected CourseAchievementControl(MimoContext context)
             : base(context)
         {
         }
 
-        public async Task<int> GetAchievementProgress(int userId, CourseTypeEnum courseType, CancellationToken cancellationToken)
+        public async Task<int> GetAchievementProgress(int userId, CourseTypeEnum courseType,
+            CancellationToken cancellationToken)
         {
             return
                 await

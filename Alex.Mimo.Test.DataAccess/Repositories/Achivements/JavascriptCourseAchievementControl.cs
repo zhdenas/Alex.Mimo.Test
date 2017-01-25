@@ -8,7 +8,7 @@ namespace Alex.Mimo.Test.DataAccess.Repositories.Achivements
 {
     internal class JavascriptCourseAchievementControl : CourseAchievementControl
     {
-        public JavascriptCourseAchievementControl(MimoContext context) 
+        public JavascriptCourseAchievementControl(MimoContext context)
             : base(context)
         {
         }

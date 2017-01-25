@@ -16,9 +16,10 @@ namespace Alex.Mimo.Test.DataAccess.Repositories
             this._context = context;
         }
 
-        public async Task CompleteLesson(int userId, int lessonId, DateTime started, DateTime finished, CancellationToken cancellationToken)
+        public async Task CompleteLesson(int userId, int lessonId, DateTime started, DateTime finished,
+            CancellationToken cancellationToken)
         {
-            this._context.LessonAttempt.Add(new LessonAttempt()
+            this._context.LessonAttempt.Add(new LessonAttempt
             {
                 UserId = userId,
                 LessonId = lessonId,

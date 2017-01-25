@@ -10,7 +10,7 @@ namespace Alex.Mimo.Test.DataAccess.Contexts
             Database.SetInitializer(new MigrateDatabaseToLatestVersion<MimoContext, Configuration>());
         }
 
-        public MimoContext() 
+        public MimoContext()
             : base("MimoConnectionString")
         {
         }

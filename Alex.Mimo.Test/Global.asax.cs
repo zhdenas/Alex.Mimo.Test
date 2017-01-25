@@ -1,6 +1,6 @@
 ﻿using System.Web;
 using System.Web.Http;
-using Alex.Mimo.Test.BLL.Implementation;
+using Alex.Mimo.Test.BLL.Services;
 
 namespace Alex.Mimo.Test
 {

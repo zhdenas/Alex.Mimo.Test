@@ -4,7 +4,7 @@ namespace Alex.Mimo.Test.DataAccess.Entities
 {
     public class User
     {
-        public int Id { get; set; }
+        public int UserId { get; set; }
 
         public virtual ICollection<LessonAttempt> LessonAttempts { get; set; }
     }

@@ -12,8 +12,8 @@ namespace Alex.Mimo.Test.DataAccess.Repositories
 {
     public class AchievementRepository : IAchievementRepository
     {
-        private readonly MimoContext _context;
         private readonly IAchievementControlFactory _achievementControlFactory;
+        private readonly MimoContext _context;
 
         internal AchievementRepository(MimoContext context, IAchievementControlFactory achievementControlFactory)
         {
@@ -26,7 +26,8 @@ namespace Alex.Mimo.Test.DataAccess.Repositories
             return await this._context.Achievement.ToListAsync(cancellationToken);
         }
 
-        public async Task<bool> IsAchievementCompleted(int userId, int achievementId, CancellationToken cancellationToken)
+        public async Task<bool> IsAchievementCompleted(int userId, int achievementId,
+            CancellationToken cancellationToken)
         {
             var achievementControl = await this.GetAchievementControl(achievementId, cancellationToken);
             return await achievementControl.IsCompleted(userId, cancellationToken);
@@ -38,9 +39,13 @@ namespace Alex.Mimo.Test.DataAccess.Repositories
             return await achievementControl.GetAchievementProgress(userId, cancellationToken);
         }
 
-        private async Task<AchievementControl> GetAchievementControl(int achievementId, CancellationToken cancellationToken)
+        private async Task<AchievementControl> GetAchievementControl(int achievementId,
+            CancellationToken cancellationToken)
         {
-            var achievementType = (await this._context.Achievement.FirstOrDefaultAsync(a => a.Id == achievementId, cancellationToken))?.AchievementType;
+            var achievementType =
+                (await
+                    this._context.Achievement.FirstOrDefaultAsync(a => a.AchievementId == achievementId,
+                        cancellationToken))?.AchievementType;
             if (achievementType != null)
             {
                 return this._achievementControlFactory.Create(achievementType.Value, this._context);

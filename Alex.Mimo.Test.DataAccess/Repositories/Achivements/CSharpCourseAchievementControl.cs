@@ -8,10 +8,9 @@ namespace Alex.Mimo.Test.DataAccess.Repositories.Achivements
 {
     internal class CSharpCourseAchievementControl : CourseAchievementControl
     {
-        public CSharpCourseAchievementControl(MimoContext context) 
+        public CSharpCourseAchievementControl(MimoContext context)
             : base(context)
         {
-            
         }
 
         public override Task<int> GetAchievementProgress(int userId, CancellationToken cancellationToken)

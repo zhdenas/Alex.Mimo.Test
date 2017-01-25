@@ -2,7 +2,7 @@
 using System.Threading;
 using System.Threading.Tasks;
 using System.Web.Http;
-using Alex.Mimo.Test.BLL.Interfaces;
+using Alex.Mimo.Test.BLL.Contracts;
 using Alex.Mimo.Test.Mappers;
 using Alex.Mimo.Test.Models;
 

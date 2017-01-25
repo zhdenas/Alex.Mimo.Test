@@ -7,14 +7,14 @@ namespace Alex.Mimo.Test.DataAccess.Entities
     public class Lesson
     {
         [Key]
-        public int Id { get; set; }
+        public int LessonId { get; set; }
 
         public int Order { get; set; }
 
         [ForeignKey(nameof(Lesson.ChapterId))]
         public virtual Chapter Chapter { get; set; }
 
-        public string ChapterId { get; set; }
+        public int ChapterId { get; set; }
 
         public virtual ICollection<LessonAttempt> LessonAttempts { get; set; }
     }
