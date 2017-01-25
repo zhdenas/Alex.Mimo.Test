@@ -1,4 +1,4 @@
-﻿namespace Alex.Mimo.Test.Models
+﻿namespace Alex.Mimo.Test.BLL.Models
 {
     public class UserModel
     {

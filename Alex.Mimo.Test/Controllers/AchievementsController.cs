@@ -1,27 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
+﻿using System.Threading.Tasks;
 using System.Web.Http;
 using Alex.Mimo.Test.BLL.Interfaces;
-using Alex.Mimo.Test.BLL.Models;
 
 namespace Alex.Mimo.Test.Controllers
 {
     [Route("api/[controller]")]
     public class AchievementsController : BaseController
     {
-        private IAchievementService _achievementService;
+        private readonly IAchievementService _achievementService;
+
         public AchievementsController(IAchievementService achievementService)
         {
-            _achievementService = achievementService;
+            this._achievementService = achievementService;
         }
+        [HttpGet]
         // GET: api/Achievements
-        public IEnumerable<AchievementModel> Get()
+        public async Task<IHttpActionResult> Get()
         {
-            var achievements = _achievementService.GetAll();
-            return achievements;
+            var achievements = await this._achievementService.GetAllAsync(this.AuthUser.Id);
+            return this.Ok(achievements);
         }
     }
 }

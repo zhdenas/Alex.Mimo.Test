@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alex.Mimo.Test.BLL", "Alex.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alex.Mimo.Test.DTO", "Alex.Mimo.Test.DTO\Alex.Mimo.Test.DTO.csproj", "{8C749CFD-1E81-4AC1-BE99-C06C056F7168}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alex.Mimo.Test.Ninject", "Alex.Mimo.Test.Ninject\Alex.Mimo.Test.Ninject.csproj", "{137BCA4A-BC09-48E0-B8EE-1ADFA976F107}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{8C749CFD-1E81-4AC1-BE99-C06C056F7168}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8C749CFD-1E81-4AC1-BE99-C06C056F7168}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8C749CFD-1E81-4AC1-BE99-C06C056F7168}.Release|Any CPU.Build.0 = Release|Any CPU
+		{137BCA4A-BC09-48E0-B8EE-1ADFA976F107}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{137BCA4A-BC09-48E0-B8EE-1ADFA976F107}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{137BCA4A-BC09-48E0-B8EE-1ADFA976F107}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{137BCA4A-BC09-48E0-B8EE-1ADFA976F107}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

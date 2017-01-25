@@ -1,4 +1,5 @@
 ﻿using System.Web.Http;
+using Alex.Mimo.Test.BLL.Models;
 
 namespace Alex.Mimo.Test.Controllers
 {
