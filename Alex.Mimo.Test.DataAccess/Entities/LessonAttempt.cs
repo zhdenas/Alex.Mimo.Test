@@ -17,7 +17,7 @@ namespace Alex.Mimo.Test.DataAccess.Entities
         [ForeignKey(nameof(LessonAttempt.LessonId))]
         public virtual Lesson Lesson { get; set; }
 
-        public string LessonId { get; set; }
+        public int LessonId { get; set; }
 
         public DateTime Started { get; set; }
 

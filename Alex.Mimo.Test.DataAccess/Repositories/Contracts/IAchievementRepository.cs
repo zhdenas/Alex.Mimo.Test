@@ -7,10 +7,10 @@ namespace Alex.Mimo.Test.DataAccess.Repositories.Contracts
 {
     public interface IAchievementRepository
     {
-        Task<IEnumerable<Achievement>> GetAllAchievements(CancellationToken cancellationToken);
+        Task<IList<Achievement>> GetAllAchievements(CancellationToken cancellationToken);
 
-        Task<bool> IsAchievementCompleted(int achievementId, CancellationToken cancellationToken);
+        Task<bool> IsAchievementCompleted(int userId, int achievementId, CancellationToken cancellationToken);
 
-        Task<int> GetAchievementProgress(int achievementId, CancellationToken cancellationToken);
+        Task<int> GetAchievementProgress(int userId, int achievementId, CancellationToken cancellationToken);
     }
 }

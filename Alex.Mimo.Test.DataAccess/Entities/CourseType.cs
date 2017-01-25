@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using Alex.Mimo.Test.Core;
 
 namespace Alex.Mimo.Test.DataAccess.Entities
 {
@@ -7,6 +8,8 @@ namespace Alex.Mimo.Test.DataAccess.Entities
         [Key]
         public int Id { get; set; }
 
-        public string Type { get; set; }
+        public string Name { get; set; }
+
+        public CourseTypeEnum Type { get; set; }
     }
 }

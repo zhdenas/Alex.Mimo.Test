@@ -12,6 +12,6 @@ namespace Alex.Mimo.Test.DataAccess.Entities
         public string Description { get; set; }
 
         [Index(IsUnique = true)]
-        public AchievementType AchievementType { get; set; }
+        public AchievementTypeEnum AchievementType { get; set; }
     }
 }
