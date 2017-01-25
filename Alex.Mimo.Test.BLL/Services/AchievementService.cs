@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Alex.Mimo.Test.BLL.Contracts;
@@ -24,7 +25,13 @@ namespace Alex.Mimo.Test.BLL.Services
 
         public async Task<List<AchievementModel>> GetAllAsync(int userId, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            var achievements = await this._achievementRepository.GetAchievements(userId, cancellationToken);
+            return achievements.Select(achievement => new AchievementModel()
+            {
+                Id = achievement.Achievement.AchievementId,
+                IsCompleted = achievement.IsCompleted,
+                Progress = achievement.Progress
+            }).ToList();
         }
     }
 }
