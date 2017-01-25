@@ -75,8 +75,24 @@
     <Compile Include="Entities\UserAchievement.cs" />
     <Compile Include="Contexts\MimoContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\AchievementRepository.cs" />
+    <Compile Include="Repositories\Achivements\Base\AchievementControl.cs" />
+    <Compile Include="Repositories\Achivements\Base\ChapterAchievementControl.cs" />
+    <Compile Include="Repositories\Achivements\Base\CourseAchievementControl.cs" />
+    <Compile Include="Repositories\Achivements\CSharpCourseAchievementControl.cs" />
+    <Compile Include="Repositories\Achivements\Factory\AchievementControlFactory.cs" />
+    <Compile Include="Repositories\Achivements\Factory\IAchievementControlFactory.cs" />
+    <Compile Include="Repositories\Achivements\FiftyLessonsAchievementControl.cs" />
+    <Compile Include="Repositories\Achivements\FiveChaptersAchievementControl.cs" />
+    <Compile Include="Repositories\Achivements\FiveLessonsAchievementControl.cs" />
+    <Compile Include="Repositories\Achivements\JavascriptCourseAchievementControl.cs" />
+    <Compile Include="Repositories\Achivements\Base\LessonsAchievementControl.cs" />
+    <Compile Include="Repositories\Achivements\OneChapterAchievementControl.cs" />
+    <Compile Include="Repositories\Achivements\SwiftCourseAchievementControl.cs" />
+    <Compile Include="Repositories\Achivements\TwentyFiveLessonsAchievementControl.cs" />
     <Compile Include="Repositories\Contracts\IAchievementRepository.cs" />
     <Compile Include="Repositories\Contracts\ILessonRepository.cs" />
+    <Compile Include="Repositories\LessonRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

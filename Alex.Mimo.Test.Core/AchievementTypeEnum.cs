@@ -1,6 +1,6 @@
 ﻿namespace Alex.Mimo.Test.Core
 {
-    public enum AchievementType
+    public enum AchievementTypeEnum
     {
         FiveLessons = 1,
         TwentyFiveLessons = 2,

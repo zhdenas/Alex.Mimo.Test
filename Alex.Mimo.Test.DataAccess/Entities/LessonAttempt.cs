@@ -12,12 +12,12 @@ namespace Alex.Mimo.Test.DataAccess.Entities
         [ForeignKey(nameof(LessonAttempt.UserId))]
         public virtual User User { get; set; }
 
-        public string UserId { get; set; }
+        public int UserId { get; set; }
 
         [ForeignKey(nameof(LessonAttempt.LessonId))]
         public virtual Lesson Lesson { get; set; }
 
-        public string LessonId { get; set; }
+        public int LessonId { get; set; }
 
         public DateTime Started { get; set; }
 
