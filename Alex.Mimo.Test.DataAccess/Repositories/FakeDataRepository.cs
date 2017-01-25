@@ -237,6 +237,14 @@ namespace Alex.Mimo.Test.DataAccess.Repositories
                 });
                 context.SaveChanges();
             }
+            if (!context.UserAchievement.Any())
+            {
+                context.UserAchievement.Add(new UserAchievement()
+                {
+
+                });
+                context.SaveChanges();
+            }
         }
     }
 }
