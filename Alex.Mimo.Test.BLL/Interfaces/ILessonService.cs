@@ -2,7 +2,7 @@
 
 namespace Alex.Mimo.Test.BLL.Interfaces
 {
-    internal interface ILessonService
+    public interface ILessonService
     {
         bool Add(LessonModel lesson);
     }
