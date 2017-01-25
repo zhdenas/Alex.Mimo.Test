@@ -1,11 +1,11 @@
-﻿using System.Threading.Tasks;
+﻿using System.Threading;
+using System.Threading.Tasks;
 using System.Web.Http;
 using Alex.Mimo.Test.BLL.Interfaces;
 using Alex.Mimo.Test.BLL.Models;
 
 namespace Alex.Mimo.Test.Controllers
 {
-    [Route("api/[controller]")]
     public class LessonsController : BaseController
     {
         private readonly ILessonService _lessonService;
@@ -15,7 +15,7 @@ namespace Alex.Mimo.Test.Controllers
         }
         // POST: api/Lessons
         [HttpPost]
-        public async Task<IHttpActionResult> Post(LessonModel lesson)
+        public async Task<IHttpActionResult> Post(LessonModel lesson, CancellationToken cancellationToken)
         {
             if (!this.ModelState.IsValid)
             {

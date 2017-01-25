@@ -41,7 +41,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Implementation\AchievementService.cs" />
+    <Compile Include="Implementation\FakeDataService.cs" />
     <Compile Include="Implementation\LessonService.cs" />
+    <Compile Include="Interfaces\IFakeDataService.cs" />
     <Compile Include="Interfaces\IAchievementService.cs" />
     <Compile Include="Interfaces\ILessonService.cs" />
     <Compile Include="Models\AchievementModel.cs" />
