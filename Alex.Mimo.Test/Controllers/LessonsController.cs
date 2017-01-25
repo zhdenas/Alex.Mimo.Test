@@ -28,7 +28,7 @@ namespace Alex.Mimo.Test.Controllers
             }
             var checkLessonDto = this._mimoMapper.Map<BLL.Models.CheckLessonModel>(checkLesson);
             checkLessonDto.UserId = this.AuthUser.Id;
-            await this._lessonService.SetCompletedAsync(checkLessonDto);
+            await this._lessonService.SetCompletedAsync(checkLessonDto, cancellationToken);
             return this.Ok(checkLesson.Id);
         }
     }

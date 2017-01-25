@@ -23,7 +23,7 @@ namespace Alex.Mimo.Test.Controllers
         // GET: api/Achievements
         public async Task<IHttpActionResult> Get(CancellationToken cancellationToken)
         {
-            var achievementsDto = await this._achievementService.GetAllAsync(this.AuthUser.Id);
+            var achievementsDto = await this._achievementService.GetAllAsync(this.AuthUser.Id, cancellationToken);
             var achievements = this._mimoMapper.Map<List<AchievementModel>>(achievementsDto);
             return this.Ok(achievements);
         }

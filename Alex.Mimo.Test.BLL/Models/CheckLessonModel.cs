@@ -7,6 +7,6 @@ namespace Alex.Mimo.Test.BLL.Models
         public int Id { get; set; }
         public int UserId { get; set; }
         public DateTime StartedDate { get; set; }
-        public DateTime? FinishedDate { get; set; }
+        public DateTime FinishedDate { get; set; }
     }
 }
