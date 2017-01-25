@@ -26,7 +26,8 @@ namespace Alex.Mimo.Test.DataAccess.Repositories
                 {
                     CourseType = new CourseType
                     {
-                        Type = "Javascript"
+                        Name = "Javascript",
+                        Type = CourseTypeEnum.Javascript
                     },
                     Chapters = new List<Chapter>
                     {
@@ -123,7 +124,8 @@ namespace Alex.Mimo.Test.DataAccess.Repositories
                 {
                     CourseType = new CourseType
                     {
-                        Type = "Swift"
+                        Name = "Swift",
+                        Type = CourseTypeEnum.Swift
                     },
                     Chapters = new List<Chapter>
                     {
@@ -165,7 +167,8 @@ namespace Alex.Mimo.Test.DataAccess.Repositories
                 {
                     CourseType = new CourseType
                     {
-                        Type = "C#"
+                        Name = "C#",
+                        Type = CourseTypeEnum.CSharp
                     },
                     Chapters = new List<Chapter>
                     {
@@ -202,8 +205,36 @@ namespace Alex.Mimo.Test.DataAccess.Repositories
             {
                 context.Achievement.Add(new Achievement()
                 {
-                    AchievementType = new AchievementType() { }
-                })
+                    AchievementType = AchievementTypeEnum.CSharpCourse
+                });
+                context.Achievement.Add(new Achievement()
+                {
+                    AchievementType = AchievementTypeEnum.SwiftCourse
+                });
+                context.Achievement.Add(new Achievement()
+                {
+                    AchievementType = AchievementTypeEnum.FiftyLessons
+                });
+                context.Achievement.Add(new Achievement()
+                {
+                    AchievementType = AchievementTypeEnum.FiveChapters
+                });
+                context.Achievement.Add(new Achievement()
+                {
+                    AchievementType = AchievementTypeEnum.JavascriptCourse
+                });
+                context.Achievement.Add(new Achievement()
+                {
+                    AchievementType = AchievementTypeEnum.FiveLessons
+                });
+                context.Achievement.Add(new Achievement()
+                {
+                    AchievementType = AchievementTypeEnum.TwentyFiveLessons
+                });
+                context.Achievement.Add(new Achievement()
+                {
+                    AchievementType = AchievementTypeEnum.OneChapter
+                });
                 context.SaveChanges();
             }
         }
