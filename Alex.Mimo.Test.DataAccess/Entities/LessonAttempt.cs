@@ -4,17 +4,17 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Alex.Mimo.Test.DataAccess.Entities
 {
-    public class LessonSolution
+    public class LessonAttempt
     {
         [Key]
         public int Id { get; set; }
 
-        [ForeignKey(nameof(LessonSolution.UserId))]
+        [ForeignKey(nameof(LessonAttempt.UserId))]
         public virtual User User { get; set; }
 
         public string UserId { get; set; }
 
-        [ForeignKey(nameof(LessonSolution.LessonId))]
+        [ForeignKey(nameof(LessonAttempt.LessonId))]
         public virtual Lesson Lesson { get; set; }
 
         public string LessonId { get; set; }

@@ -16,6 +16,6 @@ namespace Alex.Mimo.Test.DataAccess.Entities
 
         public string ChapterId { get; set; }
 
-        public virtual ICollection<LessonSolution> LessonSolutions { get; set; }
+        public virtual ICollection<LessonAttempt> LessonAttempts { get; set; }
     }
 }
