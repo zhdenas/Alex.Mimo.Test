@@ -30,6 +30,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Build.Framework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -47,11 +48,16 @@
     <Compile Include="Interfaces\IAchievementService.cs" />
     <Compile Include="Interfaces\ILessonService.cs" />
     <Compile Include="Models\AchievementModel.cs" />
-    <Compile Include="Models\LessonModel.cs" />
+    <Compile Include="Models\CheckLessonModel.cs" />
     <Compile Include="Models\UserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Alex.Mimo.Test.DataAccess\Alex.Mimo.Test.DataAccess.csproj">
+      <Project>{74B40CC6-5AAD-4023-854F-4244EE4FB362}</Project>
+      <Name>Alex.Mimo.Test.DataAccess</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

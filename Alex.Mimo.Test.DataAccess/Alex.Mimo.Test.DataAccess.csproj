@@ -92,6 +92,7 @@
     <Compile Include="Repositories\Achivements\TwentyFiveLessonsAchievementControl.cs" />
     <Compile Include="Repositories\Contracts\IAchievementRepository.cs" />
     <Compile Include="Repositories\Contracts\ILessonRepository.cs" />
+    <Compile Include="Repositories\FakeDataRepository.cs" />
     <Compile Include="Repositories\LessonRepository.cs" />
   </ItemGroup>
   <ItemGroup>
