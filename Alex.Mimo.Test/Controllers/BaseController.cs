@@ -1,5 +1,4 @@
 ﻿using System.Web.Http;
-using Alex.Mimo.Test.Models;
 
 namespace Alex.Mimo.Test.Controllers
 {
@@ -9,7 +8,7 @@ namespace Alex.Mimo.Test.Controllers
 
         protected BaseController()
         {
-            AuthUser=new UserModel()
+            this.AuthUser = new UserModel
             {
                 Id = 1,
                 Email = "test@gmail.com"

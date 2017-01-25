@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
+﻿using System.Collections.Generic;
 using System.Web.Http;
 
 namespace Alex.Mimo.Test.Controllers
@@ -13,7 +9,7 @@ namespace Alex.Mimo.Test.Controllers
         // GET: api/Achievements
         public IEnumerable<string> Get()
         {
-            return new string[] { "value1", "value2" };
+            return new[] {"value1", "value2"};
         }
 
         // GET: api/Achievements/5
@@ -23,12 +19,12 @@ namespace Alex.Mimo.Test.Controllers
         }
 
         // POST: api/Achievements
-        public void Post([FromBody]string value)
+        public void Post([FromBody] string value)
         {
         }
 
         // PUT: api/Achievements/5
-        public void Put(int id, [FromBody]string value)
+        public void Put(int id, [FromBody] string value)
         {
         }
 

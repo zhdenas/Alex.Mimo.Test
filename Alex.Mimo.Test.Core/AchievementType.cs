@@ -3,7 +3,7 @@
     public enum AchievementType
     {
         FiveLessons = 1,
-        TwentyFiveLessons = 2, 
+        TwentyFiveLessons = 2,
         FiftyLessons = 3,
         OneChapter = 4,
         FiveChapters = 5,

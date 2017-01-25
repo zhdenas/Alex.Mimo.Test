@@ -70,11 +70,18 @@
     <Compile Include="Entities\Lesson.cs" />
     <Compile Include="Entities\LessonSolution.cs" />
     <Compile Include="Entities\User.cs" />
+    <Compile Include="Entities\UserAchievement.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Alex.Mimo.Test.Core\Alex.Mimo.Test.Core.csproj">
+      <Project>{EE44BA71-ADC2-4BBA-A2D1-3BF5C8AC010F}</Project>
+      <Name>Alex.Mimo.Test.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\System.Data.SQLite.Core.1.0.104.0\build\net451\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.104.0\build\net451\System.Data.SQLite.Core.targets')" />

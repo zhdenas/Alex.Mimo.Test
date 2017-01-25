@@ -6,12 +6,12 @@ namespace Alex.Mimo.Test.DataAccess.Entities
     {
         public int Id { get; set; }
 
-        [ForeignKey(nameof(UserId))]
+        [ForeignKey(nameof(UserAchievement.UserId))]
         public virtual User User { get; set; }
 
         public string UserId { get; set; }
 
-        [ForeignKey(nameof(AchievementId))]
+        [ForeignKey(nameof(UserAchievement.AchievementId))]
         public virtual Achievement Achievement { get; set; }
 
         public string AchievementId { get; set; }
