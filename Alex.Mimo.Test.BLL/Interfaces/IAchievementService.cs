@@ -5,6 +5,6 @@ namespace Alex.Mimo.Test.BLL.Interfaces
 {
     public interface IAchievementService
     {
-        List<AchievementModel> GetAll();
+        List<AchievementModel> GetAll(int userId);
     }
 }
