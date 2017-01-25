@@ -68,7 +68,7 @@ namespace Alex.Mimo.Test.App_Start
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
-            kernel.Load(new INinjectModule[] {new ServiceModules(), new RepositoryModules()});
+            kernel.Load(new INinjectModule[] {new ServiceModule(), new RepositoryModule()});
             kernel.Bind<MimoMapper>().ToMethod(context => new MimoMapper()).InSingletonScope();
         }        
     }

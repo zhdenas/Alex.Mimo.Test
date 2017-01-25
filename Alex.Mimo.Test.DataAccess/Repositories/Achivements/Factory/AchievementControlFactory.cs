@@ -4,7 +4,7 @@ using Alex.Mimo.Test.DataAccess.Repositories.Achivements.Base;
 
 namespace Alex.Mimo.Test.DataAccess.Repositories.Achivements.Factory
 {
-    internal class AchievementControlFactory : IAchievementControlFactory
+    public class AchievementControlFactory : IAchievementControlFactory
     {
         public AchievementControl Create(AchievementTypeEnum type, MimoContext context)
         {

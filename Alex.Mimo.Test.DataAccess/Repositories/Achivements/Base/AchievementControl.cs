@@ -5,7 +5,7 @@ using Alex.Mimo.Test.DataAccess.Contexts;
 
 namespace Alex.Mimo.Test.DataAccess.Repositories.Achivements.Base
 {
-    internal abstract class AchievementControl
+    public abstract class AchievementControl
     {
         protected readonly MimoContext Context;
 

@@ -5,7 +5,7 @@ using Ninject.Web.Common;
 
 namespace Alex.Mimo.Test.Ninject
 {
-    public class ServiceModules : NinjectModule
+    public class ServiceModule : NinjectModule
     {
         public override void Load()
         {
