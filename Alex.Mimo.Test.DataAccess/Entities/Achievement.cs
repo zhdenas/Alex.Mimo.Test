@@ -1,7 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using System.Data;
-using Alex.Mimo.Test.Core;
 using System.ComponentModel.DataAnnotations.Schema;
+using Alex.Mimo.Test.Core;
 
 namespace Alex.Mimo.Test.DataAccess.Entities
 {

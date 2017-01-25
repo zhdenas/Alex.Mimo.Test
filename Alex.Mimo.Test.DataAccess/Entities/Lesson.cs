@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -12,7 +11,7 @@ namespace Alex.Mimo.Test.DataAccess.Entities
 
         public int Number { get; set; }
 
-        [ForeignKey(nameof(ChapterId))]
+        [ForeignKey(nameof(Lesson.ChapterId))]
         public virtual Chapter Chapter { get; set; }
 
         public string ChapterId { get; set; }
