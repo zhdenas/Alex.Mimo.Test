@@ -1,4 +1,5 @@
-﻿using System.Web.Http;
+﻿using System.Threading.Tasks;
+using System.Web.Http;
 using Alex.Mimo.Test.BLL.Interfaces;
 using Alex.Mimo.Test.BLL.Models;
 
@@ -13,15 +14,16 @@ namespace Alex.Mimo.Test.Controllers
             this._lessonService = lessonService;
         }
         // POST: api/Lessons
-        public IHttpActionResult Post(LessonModel lesson)
+        [HttpPost]
+        public async Task<IHttpActionResult> Post(LessonModel lesson)
         {
             if (!this.ModelState.IsValid)
             {
                 return this.BadRequest(this.ModelState);
             }
             lesson.UserId = this.AuthUser.Id;
-            this._lessonService.Add(lesson);
-            return this.Ok();
+            await this._lessonService.SetCompletedAsync(lesson);
+            return this.Ok(lesson.Id);
         }
     }
 }

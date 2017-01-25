@@ -1,4 +1,5 @@
-﻿using System.Web.Http;
+﻿using System.Threading.Tasks;
+using System.Web.Http;
 using Alex.Mimo.Test.BLL.Interfaces;
 
 namespace Alex.Mimo.Test.Controllers
@@ -12,11 +13,11 @@ namespace Alex.Mimo.Test.Controllers
         {
             this._achievementService = achievementService;
         }
-
+        [HttpGet]
         // GET: api/Achievements
-        public IHttpActionResult Get()
+        public async Task<IHttpActionResult> Get()
         {
-            var achievements = this._achievementService.GetAll(this.AuthUser.Id);
+            var achievements = await this._achievementService.GetAllAsync(this.AuthUser.Id);
             return this.Ok(achievements);
         }
     }
