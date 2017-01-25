@@ -5,7 +5,7 @@ namespace Alex.Mimo.Test.BLL.Interfaces
 {
     public interface ILessonService
     {
-        void SetCompleted(LessonModel lesson);
-        Task SetCompletedAsync(LessonModel lesson);
+        void SetCompleted(CheckLessonModel checkLesson);
+        Task SetCompletedAsync(CheckLessonModel checkLesson);
     }
 }

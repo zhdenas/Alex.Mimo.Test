@@ -9,7 +9,7 @@ namespace Alex.Mimo.Test.DataAccess.Entities
         [Key]
         public int Id { get; set; }
 
-        public int Number { get; set; }
+        public int Order { get; set; }
 
         [ForeignKey(nameof(Lesson.ChapterId))]
         public virtual Chapter Chapter { get; set; }
