@@ -64,6 +64,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AchievementModel.cs" />
     <Compile Include="Configuration.cs" />
     <Compile Include="Entities\Achievement.cs" />
     <Compile Include="Entities\Chapter.cs" />

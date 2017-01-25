@@ -21,36 +21,38 @@ namespace Alex.Mimo.Test.DataAccess.Repositories
             this._achievementControlFactory = achievementControlFactory;
         }
 
-        public async Task<IList<Achievement>> GetAllAchievements(CancellationToken cancellationToken)
+        public async Task<IList<AchievementModel>> GetAchievements(int userId, CancellationToken cancellationToken)
         {
-            return await this._context.Achievement.ToListAsync(cancellationToken);
+            var achievements = await this._context.Achievement.ToListAsync(cancellationToken);
+            var result = new List<AchievementModel>();
+            foreach (var achievement in achievements)
+            {
+                result.Add(new AchievementModel()
+                {
+                    Achievement = achievement,
+                    IsCompleted = await this.IsAchievementCompleted(userId, achievement, cancellationToken),
+                    Progress = await this.GetAchievementProgress(userId, achievement, cancellationToken)
+                });
+            }
+            return result;
         }
 
-        public async Task<bool> IsAchievementCompleted(int userId, int achievementId,
-            CancellationToken cancellationToken)
+        private async Task<bool> IsAchievementCompleted(int userId, Achievement achievement, CancellationToken cancellationToken)
         {
-            var achievementControl = await this.GetAchievementControl(achievementId, cancellationToken);
+            var achievementControl = this.GetAchievementControl(achievement);
             return await achievementControl.IsCompleted(userId, cancellationToken);
         }
 
-        public async Task<int> GetAchievementProgress(int userId, int achievementId, CancellationToken cancellationToken)
+        private async Task<int> GetAchievementProgress(int userId, Achievement achievement, CancellationToken cancellationToken)
         {
-            var achievementControl = await this.GetAchievementControl(achievementId, cancellationToken);
+            var achievementControl = this.GetAchievementControl(achievement);
             return await achievementControl.GetAchievementProgress(userId, cancellationToken);
         }
 
-        private async Task<AchievementControl> GetAchievementControl(int achievementId,
-            CancellationToken cancellationToken)
+        private AchievementControl GetAchievementControl(Achievement achievement)
         {
-            var achievementType =
-                (await
-                    this._context.Achievement.FirstOrDefaultAsync(a => a.AchievementId == achievementId,
-                        cancellationToken))?.AchievementType;
-            if (achievementType != null)
-            {
-                return this._achievementControlFactory.Create(achievementType.Value, this._context);
-            }
-            return null;
+            var achievementType = achievement.AchievementType;
+            return this._achievementControlFactory.Create(achievementType, this._context);
         }
     }
 }
